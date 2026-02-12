@@ -25,14 +25,12 @@ If needed: docker stop juiceshop.
 **Step 2: Generate SAST/DAST Data:**
 Clone the Juice Shop Code (to scan it):
 
-
-
 git clone https://github.com/juice-shop/juice-shop.git --depth 1
 cd juice-shop
 Static Application Security Testing (SAST)
 SAST analyzes the source code, byte code, or binaries without executing the app. It finds "potential" vulnerabilities in the logic.
 
-Tools to use:
+**Tools to use:**
 Semgrep (Highly Recommended): Fast, open-source, and has excellent rules for JavaScript/Node.js.
 
    SAST Scanning: docker run --rm -v `pwd`:/src returntocorp/semgrep semgrep scan --config auto --json --output semgrep_results.json
@@ -45,8 +43,6 @@ OWASP ZAP (Zaproxy): The gold standard for open-source DAST.
 
 How to generate the data:
 You can run an automated "Baseline Scan" using the OWASP ZAP Docker container. Since Juice Shop is on your VM, you can point ZAP at it:
-
-
 
 docker run --rm --network host -i ghcr.io/zaproxy/zaproxy:stable zap.sh 
 -cmd -quickurl http://vdi-lsddp-034:8081 >> dast_results.json
@@ -129,10 +125,8 @@ Successfully created dast_clean.txt
 
 The above two files are passed as inputs to python3 prioritizer_3.py
 
-Output:===============================================================================================
+Output:
                  ENTERPRISE SECURITY CONTEXTUAL PRIORITIZATION
-===============================================================================================
-
 [!] PRIORITY 0: CRITICAL (UNPROTECTED EXPLOITABLE PATHS)
 -----------------------------------------------------------------------------------------------
 >>> [MATCH: DATA_EXFILTRATION]
@@ -171,10 +165,8 @@ Output:=========================================================================
     - CWE-134  | 1 (Low)      | server.ts:155
     - CWE-611  | 2 (Medium)   | routes/fileUpload.ts:83
     - CWE-1104 | 2 (Medium)   | routes/b2bOrder.ts:23
-
-===============================================================================================
                           EXECUTIVE RISK SUMMARY
-===============================================================================================
+
 [*] Total Unique CWEs Identified: 20
     - From Semgrep (Code):      14
     - From ZAP (Live Site):     6
@@ -185,7 +177,6 @@ Output:=========================================================================
     Addressing these will break 21 active attack chains.
 
 [>] ACTIONABLE CWEs TO FIX: CWE-0, CWE-79, CWE-89, CWE-264, CWE-321, CWE-353, CWE-497, CWE-548, CWE-601, CWE-615, CWE-693, CWE-798, CWE-829, CWE-915, CWE-1333
-===============================================================================================
 
 
  
