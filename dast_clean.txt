@@ -1,0 +1,26 @@
+CWEID    | Risk Code  | Alert Name
+====================================================================================================
+CWE-0    | 0          | User Agent Fuzzer
+Risk Desc: Informational (Medium)
+Description: &lt;p&gt;Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response sta...
+----------------------------------------------------------------------------------------------------
+CWE-264  | 2          | Cross-Domain Misconfiguration
+Risk Desc: Medium (Medium)
+Description: &lt;p&gt;Web browser data loading may be possible, due to a Cross Origin Resource Sharing (CORS) misconfiguration on the web server.&lt;/p&gt;...
+----------------------------------------------------------------------------------------------------
+CWE-497  | 1          | Timestamp Disclosure - Unix
+Risk Desc: Low (Low)
+Description: &lt;p&gt;A timestamp was disclosed by the application/web server. - Unix&lt;/p&gt;...
+----------------------------------------------------------------------------------------------------
+CWE-615  | 0          | Information Disclosure - Suspicious Comments
+Risk Desc: Informational (Low)
+Description: &lt;p&gt;The response appears to contain suspicious comments which may help an attacker.&lt;/p&gt;...
+----------------------------------------------------------------------------------------------------
+CWE-693  | 2          | Content Security Policy (CSP) Header Not Set
+Risk Desc: Medium (High)
+Description: &lt;p&gt;Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site ...
+----------------------------------------------------------------------------------------------------
+CWE-829  | 1          | Cross-Domain JavaScript Source File Inclusion
+Risk Desc: Low (Medium)
+Description: &lt;p&gt;The page includes one or more script files from a third-party domain.&lt;/p&gt;...
+----------------------------------------------------------------------------------------------------
