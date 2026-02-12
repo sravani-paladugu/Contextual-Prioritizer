@@ -1,4 +1,4 @@
-COntextual Prioritizer:
+Contextual Prioritizer:
 A Contextual Prioritizer is a security intelligence tool designed to solve the "Alert Fatigue" crisis in modern software development. While traditional scanners (SAST/DAST) flag thousands of theoretical vulnerabilities, a Contextual Prioritizer filters these results based on runtime reality—identifying which flaws are actually reachable and exploitable in a live environment.
 
 **The Core Problem: Static Noise**
