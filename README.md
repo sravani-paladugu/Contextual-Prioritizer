@@ -188,36 +188,4 @@ Output:=========================================================================
 ===============================================================================================
 
 
-Strategic Insights from your Results
-Category
-
-Finding
-
-Strategic Action
-
-Exploitable Path
-
-XSS + Missing CSP
-
-Immediate Fix: Add a strict CSP header to the server config. This single change "shields" all 6 XSS/Redirect bugs at once.
-
-Active Threat
-
-SQLi + CORS Leak
-
-Immediate Fix: Sanitize the Sequelize statement in dbSchemaChallenge_1.ts.
-
-Attack Intel
-
-Hardcoded Keys + Comments
-
-Immediate Fix: Remove comments from production builds and move keys to a Secret Manager (like Vault or AWS Secrets Manager).
-
- Efficiency Gains
-Notice the Priority 2 (Backlog) section. These are bugs found in the code, but the DAST scanner didn't find an easy way to reach them or an environmental weakness to exploit them yet.
-
-Old Way: You would have 20 "Critical" bugs to fix immediately.
-
-Enterprise Contextual Way: You focus on the 15 Matches in P0 first because they are confirmed to be unprotected on the live site.
-
  
