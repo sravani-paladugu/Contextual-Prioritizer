@@ -1,0 +1,166 @@
+CWEID    | Priority     | Location / Alert Name
+====================================================================================================
+CWE-73   | 2 (Medium)   | routes/fileServer.ts:33
+Alert: External Control of File Name or Path
+Description: The application processes user-input, this is passed to res.sendFile which can allow an attacker to arbitrarily read files on the system through path ...
+----------------------------------------------------------------------------------------------------
+CWE-73   | 2 (Medium)   | routes/keyServer.ts:14
+Alert: External Control of File Name or Path
+Description: The application processes user-input, this is passed to res.sendFile which can allow an attacker to arbitrarily read files on the system through path ...
+----------------------------------------------------------------------------------------------------
+CWE-73   | 2 (Medium)   | routes/logfileServer.ts:14
+Alert: External Control of File Name or Path
+Description: The application processes user-input, this is passed to res.sendFile which can allow an attacker to arbitrarily read files on the system through path ...
+----------------------------------------------------------------------------------------------------
+CWE-73   | 2 (Medium)   | routes/quarantineServer.ts:14
+Alert: External Control of File Name or Path
+Description: The application processes user-input, this is passed to res.sendFile which can allow an attacker to arbitrarily read files on the system through path ...
+----------------------------------------------------------------------------------------------------
+CWE-79   | 1 (Low)      | data/static/codefixes/restfulXssChallenge_2.ts:62
+Alert: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')
+Description: Detected a call to `replaceAll()` in an attempt to HTML escape the string `tableData[i].description`. Manually sanitizing input through a manually bui...
+----------------------------------------------------------------------------------------------------
+CWE-79   | 1 (Low)      | data/static/codefixes/restfulXssChallenge_2.ts:62
+Alert: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')
+Description: Detected a call to `replaceAll()` in an attempt to HTML escape the string `tableData[i].description.replaceAll('<', '&lt;')`. Manually sanitizing inpu...
+----------------------------------------------------------------------------------------------------
+CWE-79   | 3 (High)     | frontend/src/hacking-instructor/index.ts:122
+Alert: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')
+Description: User controlled data in methods like `innerHTML`, `outerHTML` or `document.write` is an anti-pattern that can lead to XSS vulnerabilities...
+----------------------------------------------------------------------------------------------------
+CWE-79   | 2 (Medium)   | routes/chatbot.ts:197
+Alert: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')
+Description: User data flows into the host portion of this manually-constructed HTML. This can introduce a Cross-Site-Scripting (XSS) vulnerability if this comes f...
+----------------------------------------------------------------------------------------------------
+CWE-79   | 2 (Medium)   | routes/videoHandler.ts:58
+Alert: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')
+Description: Cannot determine what 'subs' is and it is used with a '<script>' tag. This could be susceptible to cross-site scripting (XSS). Ensure 'subs' is not ex...
+----------------------------------------------------------------------------------------------------
+CWE-79   | 2 (Medium)   | routes/videoHandler.ts:71
+Alert: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')
+Description: Cannot determine what 'subs' is and it is used with a '<script>' tag. This could be susceptible to cross-site scripting (XSS). Ensure 'subs' is not ex...
+----------------------------------------------------------------------------------------------------
+CWE-79   | 2 (Medium)   | views/promotionVideo.pug:79
+Alert: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')
+Description: Detected an explicit unescape in a Pug template, using either '!=' or '!{...}'. If external data can reach these locations, your application is expose...
+----------------------------------------------------------------------------------------------------
+CWE-89   | 3 (High)     | data/static/codefixes/dbSchemaChallenge_1.ts:5
+Alert: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')
+Description: Detected a sequelize statement that is tainted by user-input. This could lead to SQL injection if the variable is user-controlled and is not properly ...
+----------------------------------------------------------------------------------------------------
+CWE-89   | 3 (High)     | data/static/codefixes/dbSchemaChallenge_3.ts:11
+Alert: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')
+Description: Detected a sequelize statement that is tainted by user-input. This could lead to SQL injection if the variable is user-controlled and is not properly ...
+----------------------------------------------------------------------------------------------------
+CWE-89   | 3 (High)     | data/static/codefixes/unionSqlInjectionChallenge_1.ts:6
+Alert: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')
+Description: Detected a sequelize statement that is tainted by user-input. This could lead to SQL injection if the variable is user-controlled and is not properly ...
+----------------------------------------------------------------------------------------------------
+CWE-89   | 3 (High)     | data/static/codefixes/unionSqlInjectionChallenge_3.ts:10
+Alert: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')
+Description: Detected a sequelize statement that is tainted by user-input. This could lead to SQL injection if the variable is user-controlled and is not properly ...
+----------------------------------------------------------------------------------------------------
+CWE-89   | 3 (High)     | routes/login.ts:34
+Alert: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')
+Description: Detected a sequelize statement that is tainted by user-input. This could lead to SQL injection if the variable is user-controlled and is not properly ...
+----------------------------------------------------------------------------------------------------
+CWE-89   | 3 (High)     | routes/search.ts:23
+Alert: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')
+Description: Detected a sequelize statement that is tainted by user-input. This could lead to SQL injection if the variable is user-controlled and is not properly ...
+----------------------------------------------------------------------------------------------------
+CWE-95   | 2 (Medium)   | routes/captcha.ts:23
+Alert: Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection')
+Description: Detected the use of eval(). eval() can be dangerous if used to evaluate dynamic content. If this content can be input from outside the program, this m...
+----------------------------------------------------------------------------------------------------
+CWE-95   | 2 (Medium)   | routes/userProfile.ts:62
+Alert: Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection')
+Description: Detected the use of eval(). eval() can be dangerous if used to evaluate dynamic content. If this content can be input from outside the program, this m...
+----------------------------------------------------------------------------------------------------
+CWE-95   | 3 (High)     | routes/userProfile.ts:62
+Alert: Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection')
+Description: Found data from an Express or Next web request flowing to `eval`. If this data is user-controllable this can lead to execution of arbitrary system com...
+----------------------------------------------------------------------------------------------------
+CWE-134  | 1 (Low)      | server.ts:155
+Alert: Use of Externally-Controlled Format String
+Description: Detected string concatenation with a non-literal variable in a util.format / console.log function. If an attacker injects a format specifier in the st...
+----------------------------------------------------------------------------------------------------
+CWE-321  | 3 (High)     | frontend/src/app/app.guard.spec.ts:38
+Alert: Use of Hard-coded Cryptographic Key
+Description: JWT token detected...
+----------------------------------------------------------------------------------------------------
+CWE-321  | 3 (High)     | frontend/src/app/last-login-ip/last-login-ip.component.spec.ts:61
+Alert: Use of Hard-coded Cryptographic Key
+Description: JWT token detected...
+----------------------------------------------------------------------------------------------------
+CWE-321  | 3 (High)     | frontend/src/app/last-login-ip/last-login-ip.component.spec.ts:67
+Alert: Use of Hard-coded Cryptographic Key
+Description: JWT token detected...
+----------------------------------------------------------------------------------------------------
+CWE-353  | 2 (Medium)   | frontend/src/index.html:14
+Alert: Missing Support for Integrity Check
+Description: This tag is missing an 'integrity' subresource integrity attribute. The 'integrity' attribute allows for the browser to verify that externally hosted ...
+----------------------------------------------------------------------------------------------------
+CWE-353  | 2 (Medium)   | frontend/src/index.html:15
+Alert: Missing Support for Integrity Check
+Description: This tag is missing an 'integrity' subresource integrity attribute. The 'integrity' attribute allows for the browser to verify that externally hosted ...
+----------------------------------------------------------------------------------------------------
+CWE-353  | 2 (Medium)   | frontend/src/index.html:16
+Alert: Missing Support for Integrity Check
+Description: This tag is missing an 'integrity' subresource integrity attribute. The 'integrity' attribute allows for the browser to verify that externally hosted ...
+----------------------------------------------------------------------------------------------------
+CWE-548  | 2 (Medium)   | server.ts:269
+Alert: Exposure of Information Through Directory Listing
+Description: Directory listing/indexing is enabled, which may lead to disclosure of sensitive directories and files. It is recommended to disable directory listing...
+----------------------------------------------------------------------------------------------------
+CWE-548  | 2 (Medium)   | server.ts:273
+Alert: Exposure of Information Through Directory Listing
+Description: Directory listing/indexing is enabled, which may lead to disclosure of sensitive directories and files. It is recommended to disable directory listing...
+----------------------------------------------------------------------------------------------------
+CWE-548  | 2 (Medium)   | server.ts:277
+Alert: Exposure of Information Through Directory Listing
+Description: Directory listing/indexing is enabled, which may lead to disclosure of sensitive directories and files. It is recommended to disable directory listing...
+----------------------------------------------------------------------------------------------------
+CWE-548  | 2 (Medium)   | server.ts:281
+Alert: Exposure of Information Through Directory Listing
+Description: Directory listing/indexing is enabled, which may lead to disclosure of sensitive directories and files. It is recommended to disable directory listing...
+----------------------------------------------------------------------------------------------------
+CWE-601  | 2 (Medium)   | routes/redirect.ts:19
+Alert: URL Redirection to Untrusted Site ('Open Redirect')
+Description: The application redirects to a URL specified by user-supplied input `query` that is not validated. This could redirect users to malicious locations. C...
+----------------------------------------------------------------------------------------------------
+CWE-611  | 2 (Medium)   | routes/fileUpload.ts:83
+Alert: Improper Restriction of XML External Entity Reference
+Description: Detected use of parseXml() function with the `noent` field set to `true`. This can lead to an XML External Entities (XXE) attack if untrusted data is ...
+----------------------------------------------------------------------------------------------------
+CWE-798  | 3 (High)     | data/static/users.yml:150
+Alert: Use of Hard-coded Credentials
+Description: Generic Secret detected...
+----------------------------------------------------------------------------------------------------
+CWE-798  | 2 (Medium)   | lib/insecurity.ts:44
+Alert: Use of Hard-coded Credentials
+Description: Detected a hardcoded hmac key. Avoid hardcoding secrets and consider using an alternate option such as reading the secret from a config file or using ...
+----------------------------------------------------------------------------------------------------
+CWE-798  | 2 (Medium)   | lib/insecurity.ts:56
+Alert: Use of Hard-coded Credentials
+Description: A hard-coded credential was detected. It is not recommended to store credentials in source-code, as this risks secrets being leaked and used by either...
+----------------------------------------------------------------------------------------------------
+CWE-798  | 2 (Medium)   | lib/insecurity.ts:152
+Alert: Use of Hard-coded Credentials
+Description: Detected a hardcoded hmac key. Avoid hardcoding secrets and consider using an alternate option such as reading the secret from a config file or using ...
+----------------------------------------------------------------------------------------------------
+CWE-915  | 2 (Medium)   | frontend/src/hacking-instructor/helpers/helpers.ts:38
+Alert: Improperly Controlled Modification of Dynamically-Determined Object Attributes
+Description: Possibility of prototype polluting function detected. By adding or modifying attributes of an object prototype, it is possible to create attributes th...
+----------------------------------------------------------------------------------------------------
+CWE-1104 | 2 (Medium)   | routes/b2bOrder.ts:23
+Alert: Use of Unmaintained Third Party Components
+Description: Detected usage of the `notevil` package, which is unmaintained and has vulnerabilities. Using any sort of `eval()` functionality can be very dangerous...
+----------------------------------------------------------------------------------------------------
+CWE-1333 | 2 (Medium)   | lib/codingChallenges.ts:76
+Alert: Inefficient Regular Expression Complexity
+Description: RegExp() called with a `challengeKey` function argument, this might allow an attacker to cause a Regular Expression Denial-of-Service (ReDoS) within y...
+----------------------------------------------------------------------------------------------------
+CWE-1333 | 2 (Medium)   | lib/codingChallenges.ts:78
+Alert: Inefficient Regular Expression Complexity
+Description: RegExp() called with a `challengeKey` function argument, this might allow an attacker to cause a Regular Expression Denial-of-Service (ReDoS) within y...
+----------------------------------------------------------------------------------------------------
